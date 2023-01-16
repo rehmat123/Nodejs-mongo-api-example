@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = 4000;
+var cors = require('cors')
 
 // mongoose connection
 mongoose.Promise = global.Promise;
@@ -16,6 +17,7 @@ mongoose.connect('mongodb://localhost/CRMdb', {
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
+app.use(cors())
 
 routes(app);
 
