@@ -7,6 +7,7 @@ const app = express();
 const PORT = 4000;
 var cors = require('cors')
 
+
 // mongoose connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/CRMdb', {
